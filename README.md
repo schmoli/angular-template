@@ -1,27 +1,50 @@
-# AngularTemplate
+# Angular Template
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+Basic Angular 10 project
 
-## Development server
+## Instructions & Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- run `npm run lint` to lint and beautify the application.
+- run `npm run test` to test using ChromeHeadless
+- run `npm run e2e` to run e2e tests using
+- add all custom styles to `src/styles/manifest.scss`
+- git hook prevents commit before linting
+- git hook prevents push before testing
+- routing enabled
+- strict enabled
 
-## Code scaffolding
+## How it was created
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+ng new angular-template --strict --prefix schmoli --style scss --routing
+npm install --save-dev eslint
+npm install --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier
+npm install --save-dev prettier prettier-eslint eslint-config-prettier
+npm install husky --save-dev
+```
 
-## Build
+## Package.json updates
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Lint & Test
 
-## Running unit tests
+```json
+"test": "ng test --watch=false --browsers=ChromeHeadless",
+"lint": "tsc --noEmit && eslint ./src --ext js,ts,json --quiet --fix",
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Git Hooks
 
-## Running end-to-end tests
+```json
+"husky": {
+  "hooks": {
+    "pre-commit": "npm run lint",
+    "pre-push": "npm run test"
+  }
+}
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Other Updates
 
-## Further help
+### SCSS Styling Module
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- created `src/styles/manifest.scss` and imported by `src/styles.scss`
