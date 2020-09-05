@@ -1,6 +1,6 @@
 # Angular Template
 
-Basic Angular 10 project
+Basic Angular 10 project + ngx_bootstrap
 
 ## Instructions & Features
 
@@ -22,6 +22,7 @@ npm install --save-dev eslint
 npm install --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier
 npm install --save-dev prettier prettier-eslint eslint-config-prettier
 npm install husky --save-dev
+npm install ngx-bootstrap bootstrap
 ```
 
 ## Package.json updates

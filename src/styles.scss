@@ -1,4 +1,5 @@
 /* load any library/framework styles first */
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 /* load app specific styles and augment any above */
 @import './styles/manifest.scss';
