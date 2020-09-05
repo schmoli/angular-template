@@ -4,6 +4,7 @@ Basic Angular 10 project
 
 ## Instructions & Features
 
+- run `./rename.sh` to rename the project
 - run `npm run lint` to lint and beautify the application.
 - run `npm run test` to test using ChromeHeadless
 - run `npm run e2e` to run e2e tests using
