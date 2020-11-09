@@ -24,6 +24,13 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier
 npm install husky --save-dev
 ```
 
+### Updating libraries
+
+```sh
+ng update @angular/core @angular/cli # Upgrade Angular to lates (add @angular/material if using)
+npm update # Updates other libraries to latest (non-major) version
+```
+
 ## Package.json updates
 
 ### Lint & Test
