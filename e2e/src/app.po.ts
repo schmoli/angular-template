@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getTitleText(): Promise<string> {
-    return element(by.css('schmoli-root .content span')).getText() as Promise<string>;
+    return element(by.css('schmoli-root')).getText() as Promise<string>;
   }
 }
